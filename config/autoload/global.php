@@ -12,5 +12,21 @@
  */
 
 return array(
-    // ...
+    'db' => array(
+        //'username' => 'PBAdmin',
+        //'password' => '&Adm!n!$tr@t0r',
+        'username' => 'root',
+        //'password' => '&Adm!n!$tr@t0r',
+        'driver'         => 'Pdo',
+        'dsn'            => 'mysql:dbname=trevor19_PersonalBlog;host=localhost',
+        'driver_options' => array(
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+        ),
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter'
+                    => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
 );

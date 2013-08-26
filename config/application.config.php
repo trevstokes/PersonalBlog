@@ -6,6 +6,9 @@ return array(
         'About',
         'Home',
         'Posts',
+        'ZfcBase',
+        'ZfcUser',
+        //'Users',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
